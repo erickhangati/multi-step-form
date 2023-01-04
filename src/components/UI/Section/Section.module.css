@@ -1,0 +1,19 @@
+.section {
+  padding: 3rem 8rem;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+@media only screen and (max-width: 44em) {
+  .section {
+    width: 88%;
+    margin: 0 auto;
+    margin-top: -40rem;
+    background-color: white;
+    border-radius: 0.6rem;
+    padding: 4rem;
+    height: 56rem;
+  }
+}

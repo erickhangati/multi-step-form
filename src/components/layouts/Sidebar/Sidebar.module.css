@@ -1,0 +1,41 @@
+.sidebar {
+  min-height: 53rem;
+  background-image: url("/src/images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.sidebar ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+}
+
+.sidebar ul li {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 1.6rem;
+  row-gap: 0.4rem;
+}
+
+@media only screen and (max-width: 44em) {
+  .sidebar {
+    background-image: url("/src/images/bg-sidebar-mobile.svg");
+    border-radius: 0;
+    min-height: 0;
+    padding-bottom: 0;
+    height: 20rem;
+  }
+
+  .sidebar ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

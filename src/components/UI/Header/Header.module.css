@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header h2 {
+  color: var(--marine-blue);
+  font-size: 3rem;
+}
+
+.header p {
+  color: var(--cool-gray);
+}

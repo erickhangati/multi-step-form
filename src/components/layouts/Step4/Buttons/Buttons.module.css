@@ -1,0 +1,23 @@
+.buttons {
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back {
+  background-color: white;
+  color: var(--cool-gray);
+}
+
+.back:hover {
+  background-color: white;
+  color: var(--marine-blue);
+}
+
+.confirm {
+  background-color: var(--purplish-blue);
+}
+
+.confirm:hover {
+  background-color: hsla(243, 100%, 62%, 0.719);
+}

@@ -1,0 +1,16 @@
+.addons-list {
+  padding-top: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addons-list p {
+  font-size: 1.4rem;
+  color: var(--cool-gray);
+}
+
+.addons-list span {
+  font-size: 1.2rem;
+  color: var(--marine-blue);
+}

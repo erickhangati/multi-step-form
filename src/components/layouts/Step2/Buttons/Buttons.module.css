@@ -1,0 +1,15 @@
+.buttons {
+  margin-top: 5.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back {
+  background-color: white;
+  color: var(--cool-gray);
+}
+
+.back:hover {
+  background-color: white;
+  color: var(--marine-blue);
+}

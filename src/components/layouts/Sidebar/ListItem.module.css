@@ -1,0 +1,44 @@
+.number {
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  padding: 0.8rem 1.2rem;
+
+  grid-column: 1;
+  grid-row: 1 / -1;
+  align-self: center;
+}
+
+.step {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.3rem;
+
+  align-self: end;
+}
+
+.menu {
+  font-size: 1.4rem;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.active .number {
+  color: var(--marine-blue);
+  background-color: var(--light-blue);
+  border: 1px solid var(--light-blue);
+}
+
+.list-item:hover .number {
+  color: var(--marine-blue);
+  background-color: var(--white);
+  border: 1px solid var(--white);
+}
+
+@media only screen and (max-width: 44em) {
+  .step,
+  .menu {
+    display: none;
+  }
+}

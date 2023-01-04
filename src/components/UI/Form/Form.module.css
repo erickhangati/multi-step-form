@@ -1,0 +1,7 @@
+.form {
+  justify-self: stretch;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

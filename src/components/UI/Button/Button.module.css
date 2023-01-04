@@ -1,0 +1,16 @@
+.button {
+  border: 0;
+  background-color: var(--marine-blue);
+  padding: 1.4rem 2rem;
+  color: var(--magnolia);
+  font-family: inherit;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  font-size: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background-color: hsla(213, 96%, 18%, 0.8);
+}

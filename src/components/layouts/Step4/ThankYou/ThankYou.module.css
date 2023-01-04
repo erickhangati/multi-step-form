@@ -1,0 +1,30 @@
+.thank-you {
+  height: 100%;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.thank-you div {
+  width: 8rem;
+  height: 8rem;
+  background-image: url("/src//images/icon-thank-you.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.thank-you h2 {
+  font-size: 3rem;
+  color: var(--marine-blue);
+  line-height: 1;
+}
+
+.thank-you p {
+  color: var(--cool-gray);
+  line-height: 1.5;
+}

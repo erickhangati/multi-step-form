@@ -1,0 +1,49 @@
+.card {
+  padding: 1.6rem 1.4rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--light-gray);
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.card.active {
+  border: 1px solid var(--purplish-blue);
+  background-color: var(--magnolia);
+}
+
+.card.error {
+  border: 1px solid hsla(354, 84%, 57%, 0.5);
+  background-color: hsla(354, 84%, 57%, 0.1);
+}
+
+.card img {
+  width: 4rem;
+  height: auto;
+}
+
+.card div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.card div h2 {
+  font-size: 1.6rem;
+  color: var(--marine-blue);
+  line-height: 1;
+}
+
+.card div p {
+  font-size: 1.4rem;
+  color: var(--cool-gray);
+  line-height: 1;
+}
+
+.card div span {
+  font-size: 1.2rem;
+  color: var(--marine-blue);
+}

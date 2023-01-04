@@ -1,0 +1,44 @@
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--magnolia);
+  border-radius: 0.6rem;
+  padding: 1.4rem;
+}
+
+.toggle-container span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cool-gray);
+}
+
+.toggle-container span.active {
+  color: var(--marine-blue);
+}
+
+.toggle {
+  width: 3.4rem;
+  height: 1.8rem;
+  border-radius: 2rem;
+  background-color: var(--marine-blue);
+  position: relative;
+}
+
+.toggle span {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0.3rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.toggle span.yearly {
+  left: unset;
+  right: 0.3rem;
+}
