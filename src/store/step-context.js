@@ -1,5 +1,7 @@
 import React from "react";
 
+// Creating a context to manage our states globally.
+
 const StepContext = React.createContext({
   step: 1,
   setStep: () => {},

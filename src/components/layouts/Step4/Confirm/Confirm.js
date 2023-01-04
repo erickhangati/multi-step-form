@@ -8,17 +8,20 @@ import styles from "./Confirm.module.css";
 const Confirm = ({ setStep }) => {
   const stepCtx = useContext(StepContext);
 
+  // Loop addons to pick selected addons
   const selectedAddons = (
     stepCtx.billed === "monthly"
       ? stepCtx.addons.monthly
       : stepCtx.addons.yearly
   ).filter((addon) => addon.checked);
 
+  // Collect plan details for summary.
   const plan = stepCtx.plan.price;
   const addons = selectedAddons.reduce((acc, addon) => acc + addon.price, 0);
   const total = plan + addons;
 
   const changeClickHandler = () => {
+    // Set step to 2 to render step 2.
     stepCtx.setStep(2);
     setStep(2);
   };
@@ -41,6 +44,7 @@ const Confirm = ({ setStep }) => {
             stepCtx.billed === "monthly" ? "mo" : "yr"
           }`}</span>
         </div>
+        {/* Loop selectes addons to render with List component. */}
         {selectedAddons.map((addon, index) => (
           <List key={index} names={addon.names} price={addon.price} />
         ))}

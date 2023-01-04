@@ -7,6 +7,7 @@ import styles from "./List.module.css";
 const List = ({ names, price }) => {
   const stepCtx = useContext(StepContext);
 
+  // Check if billed is monthly or yearly.
   const billed = stepCtx.billed === "monthly" ? "mo" : "yr";
 
   return (

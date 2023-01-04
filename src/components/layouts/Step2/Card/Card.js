@@ -7,6 +7,8 @@ import styles from "./Card.module.css";
 const Card = ({ plan, billedYearly, onClick }) => {
   const stepCtx = useContext(StepContext);
 
+  // Re-usable card that takes the Plan, BilledYearly and Click hanlder to display.
+
   return (
     <article
       className={`${styles.card}${

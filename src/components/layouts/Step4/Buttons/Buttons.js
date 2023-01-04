@@ -8,6 +8,7 @@ import styles from "./Buttons.module.css";
 const Buttons = ({ setStep }) => {
   const stepCtx = useContext(StepContext);
 
+  // Loop to select the selected addons.
   const selectedAddons = (
     stepCtx.billed === "monthly"
       ? stepCtx.addons.monthly
@@ -15,12 +16,16 @@ const Buttons = ({ setStep }) => {
   ).filter((addon) => addon.checked);
 
   const backClickHandler = () => {
+    // Set step to 3 to render step 3
     stepCtx.setStep(3);
     setStep(3);
   };
 
   const nextClickHandler = () => {
+    // Set confirmed to true.
     stepCtx.setOrderConfirmed(true);
+
+    // Set order with order details.
     stepCtx.setOrder({
       customer: stepCtx.inputValues.names,
       email: stepCtx.inputValues.email,
@@ -28,6 +33,25 @@ const Buttons = ({ setStep }) => {
       plan: stepCtx.plan,
       addons: selectedAddons,
     });
+
+    // Reset input values.
+    stepCtx.setInputValues({
+      names: "",
+      email: "",
+      phone: "",
+    });
+
+    // Reset billed to initial monthly.
+    stepCtx.billed("monthly");
+
+    // Reset plan
+    stepCtx.setPlan({
+      names: "",
+      price: 0,
+    });
+
+    // Reset addons
+    stepCtx.setAddons([]);
   };
 
   return (

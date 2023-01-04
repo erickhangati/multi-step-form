@@ -1,3 +1,4 @@
+// Sidebar menu items.
 const Menus = [
   { step: "STEP 1", menu: "YOUR INFO" },
   { step: "STEP 2", menu: "SELECT PLAN" },

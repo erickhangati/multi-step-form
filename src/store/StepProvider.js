@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import StepContext from "./step-context";
 
+// Creating a Provider for our content to initiallize the states and provide them to our components so that they can have access to our context globaly.
+
 export const initialAddons = {
   monthly: [
     {

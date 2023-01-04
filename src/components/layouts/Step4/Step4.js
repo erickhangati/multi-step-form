@@ -10,7 +10,10 @@ const Step3 = ({ setStep }) => {
 
   return (
     <Section>
+      {/* Render Summary Component if order not confirmed */}
       {!stepCtx.orderConfirmed && <Summary setStep={setStep} />}
+
+      {/* Render Thank You Component if order confirmed */}
       {stepCtx.orderConfirmed && <ThankYou />}
     </Section>
   );

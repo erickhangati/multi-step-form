@@ -9,15 +9,18 @@ const Addons = () => {
   const stepCtx = useContext(StepContext);
 
   const addonClickHandler = (item, index) => {
+    // Pick addons from selected plan.
     const selectedAddons =
       stepCtx.billed === "monthly"
         ? stepCtx.addons.monthly
         : stepCtx.addons.yearly;
 
+    // Loop to filter selected addon.
     const filteredAddons = selectedAddons.filter(
       (addon) => addon.names !== item.names
     );
 
+    // Toggle addon selected.
     filteredAddons.splice(index, 0, {
       names: item.names,
       description: item.description,
@@ -27,6 +30,7 @@ const Addons = () => {
 
     const { billed } = stepCtx;
 
+    // Set addons
     stepCtx.setAddons((previous) => {
       return { ...previous, [billed]: filteredAddons };
     });

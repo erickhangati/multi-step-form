@@ -13,6 +13,8 @@ const ListItem = ({
   onClick,
 }) => {
   const stepCtx = useContext(StepContext);
+
+  // Local class plus and class passed through props
   const classes = `${styles.item}${className ? ` ${className}` : ""}`;
 
   return (

@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./ListItem.module.css";
 
 const ListItem = ({ number, step, menu, className, onClick }) => {
+  // Local class plus any classes passed through props.
   const classes = `${styles["list-item"]}${
     className ? ` ${styles.active}` : ""
   }`;

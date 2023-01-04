@@ -9,21 +9,26 @@ const Toggle = () => {
   const stepCtx = useContext(StepContext);
 
   const toggleClickHandler = () => {
+    // If billed is monthly set to yearly.
     if (stepCtx.billed === "monthly") {
       stepCtx.setBilled("yearly");
     }
 
+    // If billed is yearly set to monthly.
     if (stepCtx.billed === "yearly") {
       stepCtx.setBilled("monthly");
     }
 
+    // Reset plan is it was set before toggling.
     stepCtx.setPlan({
       names: "",
       price: 0,
     });
 
+    // Remove error if any was selected due to skipping step without selecting plan.
     stepCtx.setPlanError(false);
 
+    // Set addons to initial addons.
     stepCtx.setAddons(initialAddons);
   };
 

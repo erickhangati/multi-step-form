@@ -10,19 +10,24 @@ const Sidebar = ({ setStep }) => {
   const stepCtx = useContext(StepContext);
 
   const listItemClickHandler = (index) => {
+    // Get step number.
     const clicked = index + 1;
 
     const nextPage = () => {
+      // Set step
       stepCtx.setStep(index + 1);
       setStep(index + 1);
     };
 
     const setPage = (page) => {
+      // Set page
       stepCtx.setStep(page);
       setStep(page);
     };
 
+    // Check step 1 validations
     const page1Check = () => {
+      // Check if name field if it has been filled or set error state.
       if (stepCtx.inputValues.names.length === 0) {
         stepCtx.setError((previous) => {
           return {
@@ -30,10 +35,13 @@ const Sidebar = ({ setStep }) => {
             names: true,
           };
         });
+
+        // Set step 1 to render step 1.
         setPage(1);
         return;
       }
 
+      // Check if email field if it has been filled or set error state.
       if (stepCtx.inputValues.email.length === 0) {
         stepCtx.setError((previous) => {
           return {
@@ -41,10 +49,13 @@ const Sidebar = ({ setStep }) => {
             email: true,
           };
         });
+
+        // Set step 1 to render step 1.
         setPage(1);
         return;
       }
 
+      // Check if phone field if it has been filled or set error state.
       if (stepCtx.inputValues.phone.length === 0) {
         stepCtx.setError((previous) => {
           return {
@@ -52,24 +63,35 @@ const Sidebar = ({ setStep }) => {
             phone: true,
           };
         });
+
+        // Set step 1 to render step 1.
         setPage(1);
+
         return;
       }
     };
 
+    // Check step 1 validations
     const page2Check = () => {
+      // Check if plan has been selected or set error state.
       if (stepCtx.plan.names.length === 0) {
         stepCtx.setPlanError(true);
+
+        // Set step 2 to render step 2.
         stepCtx.setStep(2);
         setStep(2);
 
         return;
       }
+
+      // Go to next if validations passed.
       nextPage();
     };
 
     if (clicked === 1) setPage(1);
+
     if (clicked === 2) {
+      // Check validations of step 1.
       page1Check();
 
       if (
@@ -80,11 +102,14 @@ const Sidebar = ({ setStep }) => {
         return;
       }
 
+      // Go to next if validations passed.
       nextPage();
     }
 
     if (clicked === 3) {
+      // Check validations of step 1.
       page1Check();
+
       if (
         stepCtx.inputValues.names.length === 0 ||
         stepCtx.inputValues.email.length === 0 ||
@@ -93,10 +118,12 @@ const Sidebar = ({ setStep }) => {
         return;
       }
 
+      // Go to next if validations passed.
       page2Check();
     }
 
     if (clicked === 4) {
+      // Check validations of step 1.
       page1Check();
 
       if (
@@ -107,6 +134,7 @@ const Sidebar = ({ setStep }) => {
         return;
       }
 
+      // Check validations of step 2 and set error if not selected.
       if (stepCtx.plan.names.length === 0) {
         stepCtx.setPlanError(true);
         stepCtx.setStep(2);
@@ -115,6 +143,7 @@ const Sidebar = ({ setStep }) => {
         return;
       }
 
+      // Set step 4 to render step 4.
       setPage(4);
     }
   };
