@@ -22,6 +22,6 @@ The rest of the steps are optional upto the confirmation page.
 2. CSS (Grid, Flexbox)
 3. React JS
 
-## Live link to the QR code component
+## Live link to the Multi-Step Form
 
 [https://eric-multi-step-form.netlify.app/](https://eric-multi-step-form.netlify.app/ "Frontend Mentor Challenge - Multi-Step Form")
