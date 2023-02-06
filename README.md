@@ -8,7 +8,7 @@ This is a challenge from Frontend Mentor. We were supposed to build a Multi-Step
 
 ## How it works
 
-This form can be used form subscriptions.
+This form can be used for subscriptions.
 
 The first step the user fills their details and the form has some validation checks to ensure the fields are filled before they are able to move/access the next step.
 
